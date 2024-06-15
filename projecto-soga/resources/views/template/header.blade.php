@@ -54,14 +54,27 @@
                 <h1 class="userName">User name</h1>
                 <p class="bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor facere provident exercitationem eligendi adipisci ipsum, alias saepe dicta perspiciatis iure libero quasi expedita animi, odit enim. Saepe officiis autem soluta?</p>
                 <div class="iconsPerfil">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <div class="iconP">
+                        <img src="./assets/img/icon/curso.svg" alt="" >
+                        <p class="txtIcon">Curso</p>
+                    </div>
+                    <div class="iconP">
+                        <img src="./assets/img/icon/ano.svg" alt="" >
+                        <p class="txtIcon">Ano</p>
+                    </div>
+                    <div class="iconP">
+                        <img src="./assets/img/icon/friendBlack.svg" alt="">
+                        <p class="txtIcon">Friend</p>
+                    </div>
+                    <div class="iconP">
+                        <img src="./assets/img/icon/groupBlack.svg" alt="">
+                        <p class="txtIcon">Group</p>
+                    </div>
+                    
                 </div>
              
-                <button>Editar</button>
-                <button>Terminar sessão</button>
+                <button class="editar">Editar</button>
+                <button class="end">Terminar sessão</button>
                     
             </div>
             <div class="center"

@@ -145,3 +145,35 @@
     margin-top: 20px;
 
 }
+.iconsPerfil{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.iconP{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.txtIcon{
+    margin-left: 10px;
+}
+.editar{
+    width: 150px;
+    height: 35px;
+    color: #ffff;
+    background: #4484ce;
+    border-radius: 30px;
+    border-style: none;
+
+}
+.end{
+    margin-top: 15px;
+    width: 150px;
+    height: 35px;
+    color: #bf2222;
+    background: #ffff;
+    border-radius: 30px;
+    border: #bf2222 solid 2px;
+    
+
+}
