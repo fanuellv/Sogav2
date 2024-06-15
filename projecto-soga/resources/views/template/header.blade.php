@@ -11,7 +11,9 @@
 <body>
     <div class=".principal">
         <header class="top">
-            <img src="assets/img/soga.svg" alt="">
+            <div class="logo">
+                <img src="assets/img/soga.svg" alt="">
+            </div>
 
             <div class="icon">
                 <a href="../feed" class="feed">
@@ -46,7 +48,21 @@
         </header>
         <div class="conteiner">
             <div class="left">
-
+                <div class="person">
+                    <img src="" alt="" class="userPhoto">
+                </div>
+                <h1 class="userName">User name</h1>
+                <p class="bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor facere provident exercitationem eligendi adipisci ipsum, alias saepe dicta perspiciatis iure libero quasi expedita animi, odit enim. Saepe officiis autem soluta?</p>
+                <div class="iconsPerfil">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+             
+                <button>Editar</button>
+                <button>Terminar sessão</button>
+                    
             </div>
             <div class="center"
             ></div>
