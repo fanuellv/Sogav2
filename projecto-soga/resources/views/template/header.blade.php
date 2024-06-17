@@ -77,10 +77,13 @@
                 <button class="end">Terminar sessão</button>
                     
             </div>
-            <div class="center"
-            ></div>
+            <div class="center">
+                <div class="content">
+                    @yield("content")
+                </div>
+            </div>
             <div class="right">
-
+                @yield('rightContent')
             </div>
         </div>
     </div>

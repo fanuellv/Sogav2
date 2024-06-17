@@ -17,14 +17,14 @@
     position: fixed;
 }
 .logo{
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .icon{
     display: flex;
-    width: 40%;
+    width: 50%;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -72,7 +72,7 @@
     color: #ffff;
 }
 .search{
-    width: 30%;
+    width: 25%;
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -99,16 +99,15 @@
 }
 .conteiner{
     display: flex;
-    gap: 20px; /* Espaçamento entre as colunas */
-    width: 100%;
-    height: 90vh;
+    width: 100vw;
+    height: calc(100vh - 65px);
 }
 .left{
 
     position: fixed;
     top: 65px; /* Same as header height */
     left: 0;
-    width: 30%;
+    width: 25vw;
     height: calc(100vh - 65px);
     background-color: #eeee;
     z-index: 1000;
@@ -116,19 +115,25 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex: 1;
+    
 }
 .center{
-    width: 60%;
-    height: 100vh;
+    top: 65px; /* Same as header height */
+    left: 0;
+    width: 75vw;
     background: #ffff;
-    flex: 2; /* colunas largura */
+    height: calc(100vh - 65px);
+    display: flex;
+    align-items: end;
+    justify-content: end;
 }
 .right{
-    width: 20%;
-    height: 100vh;
+    top: 65px; /* Same as header height */
+    left: 0;
+    width: 25vw;
+    height: calc(100vh);
     background: #eeee;
-    flex: 1; /* colunas largura */
+    
 }
 .person{
     background: #dddd;
@@ -174,6 +179,12 @@
     background: #ffff;
     border-radius: 30px;
     border: #bf2222 solid 2px;
-    
-
+}
+.content{
+    width: 60%;
+    position: relative;
+    top: 65px;
+    right: 35px;
+    height: calc(100vh - 100px);
+    background: transparent;
 }
