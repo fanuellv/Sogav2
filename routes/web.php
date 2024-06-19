@@ -7,6 +7,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/perfil', function(){
-    return ;
+Route::get('/feed', function(){
+    return view('feed');
+});
+Route::get('/login', function(){
+    return view('login');
+});
+Route::get('/cadastrar', function(){
+    return view('cadastrar');
 });

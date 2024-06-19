@@ -1,0 +1,144 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.principal{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4484ce;
+}
+.right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: end;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    width: 100%;
+}
+
+.form-group,
+.form-group-select {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: none;
+    appearance: none;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: none;
+    appearance: none;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #4484ce;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0 5px;
+    background: white;
+    color: #999;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+select:focus ~ label,
+select:not([value=""]) ~ label {
+    top: -20px;
+    left: 10px;
+    color: #4484ce;
+    font-size: 12px;
+}
+
+input:focus ~ label,
+select:focus ~ label {
+    color: #4484ce;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn button[type="submit"] {
+    background-color: #4484ce;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 180px;
+}
+
+.btn button[type="button"] {
+    background-color: white;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    padding: 8px 18px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 180px;
+}
+
+.btn button[type="button"]:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+.btn button[type="submit"]:hover {
+    background-color: #356a9e;
+}
+
