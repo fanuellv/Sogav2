@@ -16,3 +16,6 @@ Route::get('/login', function(){
 Route::get('/cadastrar', function(){
     return view('cadastrar');
 });
+Route::get('/cadastra-se', function(){
+    return view('cadastra-se');
+});
