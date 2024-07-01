@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('curtidas', function (Blueprint $table) {
-            $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
-            $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->timestamps();
         });
     }
 
@@ -22,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('curtidas');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->dropTimestamps();
+        });
     }
 };

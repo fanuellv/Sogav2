@@ -17,15 +17,19 @@
                 <div>
                     <img src="./assets/img/soga-blue.svg" alt="" class="logo">
                 </div>
-                <div class="inputs">
-                    <input type="text" placeholder="Nº de estudante">
-                    <input type="text" placeholder="Senha">
-                </div>
-                <div class="btn">
-                    <button class="entrar">Entrar</button>
-                    <button class="cadastrar"><a href="/cadastrar" class="link-cadastrar">Cadastrar</a></button>
-                </div>
-
+                <form method="post" action="{{route('login.store')}}"> <!-- Defina a ação para onde os dados devem ser enviados -->
+                    @csrf
+                    <div class="inputs">
+                        <input type="text" name="numero" placeholder="Nº de estudante" required>
+                        <input type="password" name="password" placeholder="Senha" required>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" class="entrar">Entrar</button>
+                        <button type="button" class="cadastrar">
+                            <a href="/cadastrar" class="link-cadastrar">Cadastrar</a>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('participas', function (Blueprint $table) {
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
             $table->foreignId('grupo_id')->constrained('grupos')->onDelete('cascade');
-            $table->foreignId('usuario_id')->constrained('usuarios')->onDelete('cascade');
+            $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
         });
     }
 

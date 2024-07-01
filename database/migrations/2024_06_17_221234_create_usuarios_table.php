@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('numero')->unique();
             $table->string('senha');
             $table->date('dataNascimento');
             $table->string('biografia');

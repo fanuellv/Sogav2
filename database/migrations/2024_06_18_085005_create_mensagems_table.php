@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
             $table->date('data');
             $table->string('texto');
-            $table->foreignId('usuario_id')->constrained('usuarios')->onDelete('cascade');
+            $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
         });
     }
 

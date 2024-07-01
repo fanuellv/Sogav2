@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('imagem');
             $table->foreignId('curtida_id')->constrained('curtidas')->onDelete('cascade');
             $table->foreignId('comentario_id')->constrained('comentarios')->onDelete('cascade');
-            $table->foreignId('usuario_id')->constrained('usuarios')->onDelete('cascade');
+            $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
         });
     }
 
