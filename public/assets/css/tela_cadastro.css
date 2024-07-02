@@ -1,6 +1,10 @@
+input {
+    text-indent: 34px;
+}
+
 .container{
     width: 100%;
-    height: 100vh;
+    height: 99vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +15,7 @@
 #fto{
     width: 50%;
    height: 100%;
-   background-image: url("img/social-media-5187243_1280.png");
+   background-image: url(../img/cadastro-login.png);
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
@@ -21,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    width: 70vw;
+    width: 50vw;
     height: 100vh;
     margin:0vh;
     
@@ -29,16 +33,14 @@
 #cdt2{
   background-color:rgb(36, 70, 142);
    width: 285px;
-   height: 350px;
+   height: 360px;
    border-radius: 25px;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-  
-   
-   
+   margin-left: 20px;
 }
 .cdt{
     margin:5px;
@@ -49,37 +51,91 @@
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     background-color: whitesmoke;
     border-color: grey;
-} 
-
-.cdt::placeholder{
-    padding: 25px;
+    
+}
+.btn{
+gap:10px;
 }
 
 #btn2{
-    margin-left:49px;
+    margin-left: 57px;
+    float: right;
     border-radius: 10px;
     border: solid 1px;
-    height: 25px;
+    height: 30px;
     color:#4484CE;
     margin-top:10px;
     font-family: Arial, Helvetica, sans-serif;
+
+}
+#btn2:hover{
+    cursor:pointer;
+background:#eeeeee;
 }
 #btn1{
+    float: left;
     border-radius: 10px; 
     border: solid 1px;
-    height: 25px;
+    height: 30px;
     color:rgb(168, 7, 7);
+    margin-top:10px;
     font-family: Arial, Helvetica, sans-serif;
 }
+#btn1:hover{
+    cursor:pointer;
+background:#eeeeee;
+}
+
 img{
-    width: 125px;
-    height: 35px;
+    margin-top:-20%;
+    width: 120px;
+    height: 40px;
     object-fit: cover;
     padding-left: 125px;
 }
-button:hover{
-    cursor:pointer;
-background-color:#eeee;
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin:5px;
+    width: 99%;
+    height: 25px;
+    gap:25px;
+    margin-left: 40px;
+    
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 10px; 
+    color: #343434;
+    width: 5px;
+    height: 50x;
+     
+}
+input::placeholder{
+    padding-left: -20px;
+}
+select{
+    width: 20px;
+}
+#inputCursoSelecionado::before {
+      text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#inputAnoSelecionado::before {
+    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#img{
+margin-left:-80%;
+width: 10px;
 }
 
 

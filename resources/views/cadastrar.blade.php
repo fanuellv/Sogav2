@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastrar</title>
-    <link rel="stylesheet" href="./assets/css/cadastrar.css">
+    <link rel="stylesheet" href="./assets/css/cadastrar-se.css">
 </head>
 <body>
     <div class="principal">

@@ -13,9 +13,16 @@ Route::get('/feed', function(){
 Route::get('/login', function(){
     return view('login');
 });
-Route::get('/cadastrar', function(){
-    return view('cadastrar');
+Route::get('/tela_cadastro', function(){
+    return view('tela_cadastro');
 });
-Route::get('/cadastra-se', function(){
-    return view('cadastra-se');
+Route::get('/tela_bios', function(){
+    return view('tela_bios');
 });
+Route::get('/SOGA', function(){
+    return view('SOGA');
+});
+Route::get('/tela_perfil', function(){
+    return view('tela_perfil');
+});
+

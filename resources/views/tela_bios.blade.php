@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="teste.css">
     <style>
         #container{
-            background-color:rgb(29, 57, 117);
+            background-color:white;
             width: 10ovh;
             height:40vw;
             margin: 0vh;
@@ -18,7 +18,7 @@
 
         .btn01{
             position: absolute;
-            top:250px;
+            top:200px;
             left:50px;
             transform: translate(90%, -10%);
             width: 50%;
@@ -54,11 +54,12 @@
         }
         h3{
             position: absolute;
-            top:150px;
-            transform: translate(235%, -10%); 
-            color: white;
+            top:100px;
+            transform: translate(210%, -10%); 
+            color: black;
             font-size: medium;
             font-family: Arial, Helvetica, sans-serif;
+        
         }
 
         #inputdata{
@@ -124,29 +125,9 @@
 </head>
 <body>
     <div id="container">
-        <h3 id="datatext" >Data de Nascimento</h3>
-        <div class="input0">
-
-            <dive id="inputdata"> 
-                
-                <input class="data" ></input>
-                <input class="data" ></input>
-                <input class="data" ></input>
-                
-    
-            </dive> 
-             <div class="inputgenero">
-                <labe class="label1">Feminino</labe>       
-                <input class="genero"></input>
-                <label class="label1">Masculino<label>
-                <input class="genero"></input>
-            
-            </div> 
-            <div id="inputmorada">   
-                <input id="morada" placeholder="Morada"></input>
-            </div>    
-            
-        </div>    
+        <input type="text" placeholder="">
+        <h3 id="biotext" >Biografia</h3>
+    </div>    
         <h3>Selecione pelo menos quatro (4) interesses</h3>
         <div class="btn01">
             <button class="btn" id="btn1">Programação</button>
