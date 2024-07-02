@@ -11,7 +11,8 @@
     <div class="principal">
         <div class="left">
             <div class="container">
-                <form action="" method="POST">
+                <form action="{{route('cadastro.store')}}" method="POST">
+                    @csrf
                     <div class="logo">
                         <img src="./assets/img/soga-blue.svg" alt="">
                     </div>
@@ -22,18 +23,18 @@
                     </div>
             
                     <div class="form-group">
-                        <input type="text" id="nome" name="nome" required>
-                        <label for="nome">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Nome</label>
                     </div>
             
                     <div class="form-group">
-                        <input type="tel" id="number" name="number" required>
-                        <label for="number">Número de estudante</label>
+                        <input type="tel" id="numero" name="numero" required>
+                        <label for="numero">Número de estudante</label>
                     </div>
             
                     <div class="form-group">
-                        <input type="password" id="senha" name="senha" required>
-                        <label for="senha">Senha</label>
+                        <input type="password" id="password" name="password" required>
+                        <label for="password">Senha</label>
                     </div>
                     <div class="form-group-select">
                         <select id="curso" name="curso" required>
@@ -46,14 +47,14 @@
                     </div>
             
                     <div class="form-group-select">
-                        <select id="ano_frequencia" name="ano_frequencia" required>
+                        <select id="ano" name="ano" required>
                             <option value="" disabled selected></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                         </select>
-                        <label for="ano_frequencia">Ano de Frequência</label>
+                        <label for="ano">Ano de Frequência</label>
                     </div>
             
                     <div class="btn">

@@ -1,7 +1,7 @@
 @extends('template.header')
 @section('titulo')
 <title>feed</title>
-<link rel="stylesheet" href="./assets/css/feed.css">
+<link rel="stylesheet" href="{{asset('assets/css/feed.css')}}">
 
 @endsection
 

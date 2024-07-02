@@ -1,0 +1,114 @@
+#container{
+    background-color:white;
+    width: 10ovh;
+    height:40vw;
+    margin: 0vh;
+}
+body{
+   background-color:#4484ce;
+}
+
+.btn01{
+    position: absolute;
+    top:200px;
+    left:50px;
+    transform: translate(90%, -10%);
+    width: 50%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: repeat(2, 5fr); /* Cria duas colunas com largura igual */
+    gap: 10px; /*coloca espaçamento entre os dois grupos*/
+}
+ .btn{
+    transform: translate(20%, -10%);
+     width: 80%;
+     border-radius: 10px;
+     border:solid 1px;
+     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+     border-color: grey;
+     height: 30px;
+}
+.btn11{
+    position: absolute;
+    top:486px;
+    left:50px;
+    transform: translate(90%, -10%);
+    margin: 5px;
+}
+#btnesquerdo{
+    float: right;
+    margin:0 10px;
+    transform: translate(1300%, -10%);
+}
+#btndireito{
+    float:left;
+    margin-left: 10px;
+}
+h3{
+    position: absolute;
+    top:100px;
+    transform: translate(210%, -10%); 
+    color: black;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#inputdata{
+    
+    display: flex;
+    justify-content: 2px;
+    margin-bottom: 10px;
+    gap:5px;
+}
+.data{
+
+    border-radius: 8px;
+     border:solid 1px;
+     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+     border-color: grey;
+     height: 30px;
+     width: 55px;
+}
+#datatext{
+    left:-17%;
+    top:18%;
+    font-size: small;
+}
+  .input0{
+
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    transform: translate(0%,50%);
+
+}
+#inputmorada{
+    top:35vh;
+    left: -30%;
+    position: absolute;
+    transform: translate(50%, -50%);
+    
+
+}
+#morada{
+    border-radius: 10px;
+     border:solid 1px;
+     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+     border-color: grey;
+     height: 30px;
+     width: 280px;
+}
+.inputgenero{
+    width: 5%;
+    height:2%;
+}
+.genero{
+    top:20%;
+    width: 5%;
+    height: 5%;
+}
+.label1{
+    color:white;
+    
+}

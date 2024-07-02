@@ -1,0 +1,135 @@
+/* public/assets/css/telaPerfil.css */
+
+h3 {
+    position: absolute;
+    top: 150px;
+    transform: translate(235%, -10%); 
+    color: white;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#inputdata {
+    margin: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data {
+    background-color: rgb(250, 246, 246);
+    border-radius: 8px;
+    border: solid 1px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border-color: rgb(216, 214, 214);
+    height: 30px;
+    width: 80px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+#datatext {
+    left: -88%;
+    top: 25%;
+    font-size: small;
+    color: black;
+}
+
+.container {
+    background-color: #f7f5f5;
+    width: 350px;
+    height: auto;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.morada {
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    height: 25px;
+    width: 280px;
+    background-color: rgba(248, 245, 245, 0.753);
+    margin-top: 9px;
+    border: solid 1px;
+    border-color: #4484CE;
+}
+
+.generobtn {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.genero {
+    margin-left: 5px;
+}
+
+body {
+    background-color: #4484CE;
+    display: flex;     
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.imagem {
+    background-color: rgb(199, 196, 196);
+    width: 50px;
+    border-radius: 100%; 
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.input-foto {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.input-foto input {
+    margin-top: 10px;
+}
+
+.btn {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#btn1, #btn2 {
+    width: 140px;
+    background-color: #efefef;
+    border-radius: 3px;
+    border: solid 1px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#btn1 {
+    color: rgb(235, 20, 20);
+    border-color: red;
+}
+
+#btn2 {
+    color: #4484CE;
+    border-color: #4484CE;
+}
+
+p {
+    margin: 0;
+    padding: 0;  
+    font-size: small;
+}
+.container1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

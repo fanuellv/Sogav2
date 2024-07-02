@@ -18,6 +18,6 @@ class PasswordEncryptionController extends Controller
             }
         }
 
-        return 'Todas as senhas foram verificadas e atualizadas, se necessário.';
+        return view('login');
     }
 }

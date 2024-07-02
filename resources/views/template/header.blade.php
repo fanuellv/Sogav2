@@ -51,24 +51,24 @@
                 <div class="person">
                     <img src="" alt="" class="userPhoto">
                 </div>
-                <h1 class="userName">User name</h1>
+                <h1 class="userName">{{ $user->name }}</h1>
                 <p class="bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor facere provident exercitationem eligendi adipisci ipsum, alias saepe dicta perspiciatis iure libero quasi expedita animi, odit enim. Saepe officiis autem soluta?</p>
                 <div class="iconsPerfil">
                     <div class="iconP">
                         <img src="./assets/img/icon/curso.svg" alt="" >
-                        <p class="txtIcon">Curso</p>
+                        <p class="txtIcon">Curso: {{$user->curso}}</p>
                     </div>
                     <div class="iconP">
                         <img src="./assets/img/icon/ano.svg" alt="" >
-                        <p class="txtIcon">Ano</p>
+                        <p class="txtIcon">Ano: {{$user->ano}}</p>
                     </div>
                     <div class="iconP">
                         <img src="./assets/img/icon/friendBlack.svg" alt="">
-                        <p class="txtIcon">Friend</p>
+                        <p class="txtIcon">Friend: </p>
                     </div>
                     <div class="iconP">
                         <img src="./assets/img/icon/groupBlack.svg" alt="">
-                        <p class="txtIcon">Group</p>
+                        <p class="txtIcon">Group: </p>
                     </div>
                     
                 </div>
