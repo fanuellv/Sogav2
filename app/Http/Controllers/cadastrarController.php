@@ -56,35 +56,40 @@ class cadastrarController extends Controller
     }
     public function storePerfil(Request $request)
 {
-    // Verificar se o usuário está autenticado
     if (!auth()->check()) {
-        return redirect()->route('login'); // Redirecionar para a página de login, por exemplo
+    return redirect()->route('login');
     }
 
-    // Assume the user is already authenticated and the userId is obtained from the session or authentication
-    $userId = auth()->user()->id;
+    $user = auth()->user();
+    // Verifica se o objeto user é uma instância do modelo User
+    if (!$user instanceof User) {
+        $user = User::find(auth()->user()->id);
+    }
 
-    $user = User::findOrFail($userId);
     $user->dataNascimento = $request->dataNascimento;
     $user->municipio = $request->municipio;
     $user->bairro = $request->bairro;
-    $user->femenino = $request->masculino;
-    $user->masculino = $request->femenino;
+    $user->femenino = $request->femenino;
+    $user->masculino = $request->masculino;
 
-    if ($request->hasFile('fotoPerfil')) {
-        $imageName = time() . '.' . $request->fotoPerfil->extension();
-        $request->fotoPerfil->move(public_path('uploads'), $imageName);
-        $user->fotoPerfil = $imageName;
-    }
 
-    $user->save();
+    $file = $request->file('fotoPerfil');
 
-    return redirect()->route('cadastro.end')->with('sucesso', 'Usuário criado com sucesso.');
+    // Verifica se houve algum problema com o arquivo antes de tentar armazenar
+    if ($file->isValid()) {
+        $fileName = rand(0, 99999) . '-' . $file->getClientOriginalName();
+        $path = $file->storeAs('public/Uploads', $fileName); // Salva o arquivo no diretório 'storage/app/public/Uploads'
+        $user->fotoPerfil = 'storage/public/Uploads/' . $fileName; // Armazena o caminho relativo no banco de dados
+    } 
+
+$user->save();
+
+return redirect()->route('cadastro.end')->with('sucesso', 'Perfil atualizado com sucesso.');
 }
 
 
     /**
-     * Display the specified resource.
+     * Display the specified resourc
      */
     public function show(string $id)
     {

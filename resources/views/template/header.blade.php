@@ -49,7 +49,7 @@
         <div class="conteiner">
             <div class="left">
                 <div class="person">
-                    <img src="" alt="" class="userPhoto">
+                    <img src="{{ $user->fotoPerfil }}" alt="{{ $user->name }} - Foto de Perfil" class="userPhoto">
                 </div>
                 <h1 class="userName">{{ $user->name }}</h1>
                 <p class="bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor facere provident exercitationem eligendi adipisci ipsum, alias saepe dicta perspiciatis iure libero quasi expedita animi, odit enim. Saepe officiis autem soluta?</p>

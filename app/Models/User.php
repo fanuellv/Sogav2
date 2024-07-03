@@ -27,6 +27,10 @@ class User extends Authenticatable
         'fotoPerfil',
         'curso',
         'ano',
+        'municipio',
+        'bairro',
+        'femenino',
+        'masculino',
     ];
 
     /**

@@ -25,5 +25,5 @@ Route::get('/encrypt-passwords', [PasswordEncryptionController::class, 'encryptP
 Route::get('/cadastrar', [cadastrarController::class,'create'])->name('cadastro');
 Route::post('/cadastrar/store', [cadastrarController::class,'store'])->name('cadastro.store');
 Route::get('/cadastrar/perfil', [cadastrarController::class,'createPerfil'])->name('cadastro.perfil');
-Route::post('/cadastrar/perfil', [cadastrarController::class, 'storePerfil'])->name('perfil.store'); // This line was updated to add a POST route for profile
+Route::post('/cadastrar/perfil/store', [cadastrarController::class, 'storePerfil'])->name('perfil.store'); // This line was updated to add a POST route for profile
 Route::get('/cadastrar/perfil/bio', [cadastrarController::class,'CreateBio'])->name('cadastro.end');

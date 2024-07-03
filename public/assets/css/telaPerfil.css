@@ -1,4 +1,22 @@
-/* public/assets/css/telaPerfil.css */
+.input-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.foto-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.foto-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
 
 h3 {
     position: absolute;
