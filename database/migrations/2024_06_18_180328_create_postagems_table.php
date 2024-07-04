@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('postagems', function (Blueprint $table) {
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
-            $table->string('texto');
-            $table->string('imagem');
-            $table->foreignId('curtida_id')->constrained('curtidas')->onDelete('cascade');
-            $table->foreignId('comentario_id')->constrained('comentarios')->onDelete('cascade');
+            $table->string('texto')->nullable();
+            $table->string('imagem')->nullable();
+            $table->foreignId('curtida_id')->nullable()->constrained('curtidas')->onDelete('cascade');
+            $table->foreignId('comentario_id')->nullable()->constrained('comentarios')->onDelete('cascade');
             $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

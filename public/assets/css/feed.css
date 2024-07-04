@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 .publicacion{
-    margin-top: 20px;
+    margin-top: -60px;
     width: calc(100vw-35px);
     background: #eeee;
     border-radius: 20px;
-    display: flex;
+    display: flex;  
     justify-content: center;
     flex-direction: column;
     padding: 10px;
@@ -107,6 +107,11 @@
   .inputs-modal {
     margin-bottom: 20px;
     display: flex;
+    
+  }
+  .inputs-modal2 {
+    margin-bottom: 20px;
+    display: flex;
     flex-direction: column;
   }
   
@@ -130,6 +135,6 @@
   }
   
   #imagem-modal{
-    display: none;
+    
   }
 

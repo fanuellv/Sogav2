@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('texto');
             $table->date('data');
             $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('postagem_id')->constrained('postagems')->onDelete('cascade');
         });
     }
 

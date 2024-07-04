@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\postagem;
 
 class feedController extends Controller
 {
@@ -15,9 +16,10 @@ class feedController extends Controller
         //
         // Pegando o usuário logado
         $user = Auth::user();
+        $posts = postagem::all();
 
         // Passando o usuário logado para a view
-        return view('feed', compact('user'));
+        return view('feed', compact('user'),compact('posts'));
     }
 
     /**

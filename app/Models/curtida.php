@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class curtida extends Model
 {
     use HasFactory;
+    
 }
