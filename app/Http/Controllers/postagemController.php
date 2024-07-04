@@ -36,7 +36,7 @@ class postagemController extends Controller
     {
         // Validação do texto e do arquivo de imagem (se enviado)
         $request->validate([
-            'texto' => 'required|string|max:255',
+            'texto' => 'required|string|max:1055',
             'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10048',
         ]);
 

@@ -11,6 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::disableForeignKeyConstraints();
+
+        // Suas migrações aqui
+
+        Schema::enableForeignKeyConstraints();
+        
         Schema::create('mensagems', function (Blueprint $table) {
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
             $table->date('data');

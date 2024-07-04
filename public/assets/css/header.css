@@ -135,19 +135,20 @@ body, html {
     background: transparent;
 }
 .center{
-    top: 65px; /* Same as header height */
+    position: relative;
+    top: 0px; /* Same as header height */
     left: 0;
     width: 75vw;
     overflow-y: auto;
     background: #ffff;
-    height: calc(100vh - 65px);
+    height: auto;
     display: flex;
     align-items: end;
     justify-content: end;
 }
 .right{
-    top: 65px; /* Same as header height */
-    left: 0;
+    position: relative;
+    top: 0px; /* Same as header height */
     width: 25vw;
     height: calc(100vh);
     background: #eeee;
@@ -166,9 +167,12 @@ body, html {
 }
 .bio{
     width: 250px;
-    height: 80px;
-    overflow-y: scroll;
+    height: auto;
+    max-height: 100px;
+    overflow-y: auto;
     margin-top: 20px;
+    text-align: center;
+    text-justify: auto;
 
 }
 .iconsPerfil{

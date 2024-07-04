@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('postagems', function (Blueprint $table) {
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
-            $table->string('texto')->nullable();
+            $table->string('texto',1050)->nullable();
             $table->string('imagem')->nullable();
             $table->foreignId('curtida_id')->nullable()->constrained('curtidas')->onDelete('cascade');
             $table->foreignId('comentario_id')->nullable()->constrained('comentarios')->onDelete('cascade');

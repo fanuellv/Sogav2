@@ -13,9 +13,22 @@
     <div class="container">
         <form action="{{ route('perfil.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            <!-- Exibição de mensagens de erro e sucesso -->
+
+            
+            
             <div class="input-foto">
                 <label for="fotoPerfil" class="foto-label">Adicione uma foto</label>
                 <input type="file" id="fotoPerfil" name="fotoPerfil" class="foto-input">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li style="color: red">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             </div>
 
             <h3 id="datatext">Data de Nascimento</h3>

@@ -2,55 +2,52 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
 
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
-        'name',
-        'email',
-        'numero',
-        'password',
-        'dataNascimento',
-        'biografia',
-        'fotoPerfil',
-        'curso',
-        'ano',
-        'municipio',
-        'bairro',
-        'femenino',
-        'masculino',
+        'name', 'email', 'password', 'numero', 'dataNascimento', 'biografia', 'fotoPerfil',
+        'curso', 'ano', 'municipio', 'bairro', 'femenino', 'masculino',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    public function initiatedFriendships()
     {
-        return [
-            'password' => 'hashed',
-        ];
+        return $this->hasMany(Amizade::class, 'usuario1_id');
+    }
+
+    public function receivedFriendships()
+    {
+        return $this->hasMany(Amizade::class, 'usuario2_id');
+    }
+
+    public function friends()
+    {
+        $initiatedFriendships = $this->initiatedFriendships()->where('status', 'aceito')->pluck('usuario2_id');
+        $receivedFriendships = $this->receivedFriendships()->where('status', 'aceito')->pluck('usuario1_id');
+
+        return User::whereIn('id', $initiatedFriendships)->orWhereIn('id', $receivedFriendships)->get();
+    }
+
+    public function pendingFriendRequests()
+    {
+        return $this->receivedFriendships()->where('status', 'espera')->with('initiator')->get();
+    }
+
+    public function sentFriendRequests()
+    {
+        return $this->initiatedFriendships()->where('status', 'espera')->get();
     }
 }

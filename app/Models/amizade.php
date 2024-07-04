@@ -1,16 +1,19 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class amizade extends Model
+class Amizade extends Model
 {
     use HasFactory;
 
-    public function user()
+    protected $fillable = [
+        'data_inicio', 'usuario1_id', 'usuario2_id', 'status',
+    ];
+
+    public function initiator()
     {
-        return $this->belongsTo(User::class, 'usuario_id');
+        return $this->belongsTo(User::class, 'usuario1_id');
     }
 }

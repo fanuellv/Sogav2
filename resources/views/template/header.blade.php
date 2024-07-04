@@ -18,12 +18,12 @@
             </div>
 
             <div class="icon">
-                <a href="../feed" class="feed">
+                <a href="{{route('feed')}}" class="feed">
                     <div class="ifeed">
 
                     </div>
                 </a>
-                <a href="../feed" class="friend">
+                <a href="{{route('amigo')}}" class="friend">
                     <div class="ifriend">
 
                     </div>
@@ -86,16 +86,10 @@
                 </form>
 
             </div>
-            <div class="centerCenter">
-                <div class="center">
-                    <div class="content">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                @yield('rightContent')
-            </div>
+            @yield('content')
+            
+            @yield('rightContent')
+            
         </div>
     </div>
 </body>

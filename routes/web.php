@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\AmigoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\cadastrarController;
@@ -35,4 +37,12 @@ Route::post('/cadastrar/edit', [cadastrarController::class,'edit'])->name('cadas
 
 //Routa para  postagem
 Route::post('/criarPostagem', [postagemController::class,'store'])->name('CriarPostagem');
+Route::get('/criarPostagem', [postagemController::class,'store'])->name('CriarPostagem');
 
+//ROuta Amigo
+Route::middleware('auth')->group(function () {
+    Route::get('/amigo', [AmigoController::class,'index'])->name('amigo');
+    Route::post('/amigos/enviar/{id}', [AmigoController::class, 'enviarSolicitacao'])->name('amigos.enviar');
+    Route::post('/amigos/aceitar/{id}', [AmigoController::class, 'aceitarSolicitacao'])->name('amigos.aceitar');
+    Route::post('/amigos/recusar/{id}', [AmigoController::class, 'recusarSolicitacao'])->name('amigos.recusar');
+});
