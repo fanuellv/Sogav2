@@ -25,4 +25,7 @@ Route::get('/SOGA', function(){
 Route::get('/tela_perfil', function(){
     return view('tela_perfil');
 });
+Route::get('/tela_chat', function(){
+    return view('tela_chat');
+});
 
