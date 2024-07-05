@@ -71,7 +71,7 @@
 
                     <div class="btn">
                         <button type="submit">Seguinte</button>
-                        <button type="button">Cancelar</button>
+                        <button type="button" onclick="window.location.href='/login'">Cancelar</button>
                     </div>
                 </form>
             </div>
