@@ -3,6 +3,14 @@
     <title>feed</title>
     <link rel="stylesheet" href="{{ asset('assets/css/feed.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/postagem.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+        * {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -108,19 +116,14 @@
         </div>
         <div class="amigos">
             <hr id="linha">
-        <h1>Lista de amigos</h1>
-        @foreach ($user->friends() as $request)
-            <div class="containerUser">
-                @if ($request->initiator)
-                    <div class="userFoto" style="background-image: url('{{ asset($request->initiator->fotoPerfil) }}');">
+            <h1>Lista de amigos</h1>
+            @foreach ($user->friends() as $friend)
+                <div class="containerUser">
+                    <div class="userFoto" style="background-image: url('{{ asset($friend->fotoPerfil) }}');">
                     </div>
-                    <p>{{ $request->initiator->name }}</p>
-                    
-                @else
-                    <p>Iniciador não encontrado.</p>
-                @endif
-            </div>
-        @endforeach
+                    <p>{{ $friend->name }}</p>
+                </div>
+            @endforeach
 
         </div>
 

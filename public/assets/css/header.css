@@ -160,6 +160,8 @@ body, html {
     height: calc(100vh);
     background: transparent;
     overflow-y: auto;
+
+    color: #5e5e5eee;
     
 }
 .person{

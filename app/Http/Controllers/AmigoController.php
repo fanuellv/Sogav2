@@ -20,7 +20,7 @@ class AmigoController extends Controller
 
         $utilizadores = User::all();
 
-        return view("friend",compact('user', 'utilizadores'));
+        return view("friend", compact('user', 'utilizadores'));
     }
 
     /**
@@ -75,7 +75,25 @@ class AmigoController extends Controller
     public function enviarSolicitacao($amigo_id)
     {
         $usuario = Auth::user();
-        amizade::create([
+
+        if ($usuario->id == $amigo_id) {
+            return back()->with('error', 'Você não pode enviar uma solicitação de amizade para si mesmo.');
+        }
+
+        // Verifica se já existe uma solicitação de amizade pendente ou aceita entre os dois usuários
+        $jaExistente = Amizade::where(function ($query) use ($usuario, $amigo_id) {
+            $query->where('usuario1_id', $usuario->id)
+                ->where('usuario2_id', $amigo_id);
+        })->orWhere(function ($query) use ($usuario, $amigo_id) {
+            $query->where('usuario1_id', $amigo_id)
+                ->where('usuario2_id', $usuario->id);
+        })->first();
+
+        if ($jaExistente) {
+            return back()->with('error', 'Já existe uma solicitação de amizade pendente ou aceita entre vocês.');
+        }
+
+        Amizade::create([
             'data_inicio' => now(),
             'usuario1_id' => $usuario->id,
             'usuario2_id' => $amigo_id,
@@ -89,8 +107,8 @@ class AmigoController extends Controller
     public function aceitarSolicitacao($usuario_id)
     {
         $amizade = amizade::where('usuario1_id', $usuario_id)
-                             ->where('usuario2_id', Auth::id())
-                             ->first();
+            ->where('usuario2_id', Auth::id())
+            ->first();
 
         if ($amizade) {
             $amizade->update(['status' => 'aceito']);
@@ -104,8 +122,8 @@ class AmigoController extends Controller
     public function recusarSolicitacao($usuario_id)
     {
         $amizade = amizade::where('usuario1_id', $usuario_id)
-                             ->where('usuario2_id', Auth::id())
-                             ->first();
+            ->where('usuario2_id', Auth::id())
+            ->first();
 
         if ($amizade) {
             $amizade->update(['status' => 'rejeitado']);

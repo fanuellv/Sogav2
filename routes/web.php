@@ -4,6 +4,7 @@ use App\Http\Controllers\AmigoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\cadastrarController;
+use App\Http\Controllers\chatController;
 use App\Http\Controllers\feedController;
 use App\Http\Controllers\grupoController;
 use App\Http\Controllers\postagemController;
@@ -53,3 +54,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/grupo', [grupoController::class,'index'])->name('grupo');
     Route::post('/grupo', [grupoController::class,'store'])->name('grupo.store');
 });
+
+//routa chat
+Route::get('/chat',[chatController::class, 'index'])->name('chat');

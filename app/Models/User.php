@@ -35,10 +35,13 @@ class User extends Authenticatable
 
     public function friends()
     {
+        // Obtém os IDs dos amigos aceitos (amigos mútuos)
         $initiatedFriendships = $this->initiatedFriendships()->where('status', 'aceito')->pluck('usuario2_id');
         $receivedFriendships = $this->receivedFriendships()->where('status', 'aceito')->pluck('usuario1_id');
 
-        return User::whereIn('id', $initiatedFriendships)->orWhereIn('id', $receivedFriendships)->get();
+        // Combina os IDs e busca os usuários correspondentes
+        $friendIds = $initiatedFriendships->merge($receivedFriendships);
+        return User::whereIn('id', $friendIds)->get();
     }
 
     public function pendingFriendRequests()
