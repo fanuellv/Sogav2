@@ -1,0 +1,140 @@
+.contact-list {
+    width: 26vw;
+    height: 100vh; /* 100% da altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.left{
+    z-index: 0;
+    
+    top: 0px; /* Same as header height */
+    left: 0;
+    width: 26vw;
+    height: calc(100vh);
+    background-color: #eeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.chat-box {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    background-color: #88d1f08e;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contacts {
+ 
+ padding-left: 0;
+ 
+overflow-y: auto;   
+flex: 0 0 30%;   
+overflow-y: scroll; /* habilita a barra de rolagem vertical */
+height: 100%; /* altura da div de contatos */
+float: left; /* para alinhar o botão à direita */
+
+margin: 10px; /* margem à direita para separação do botão */
+
+}
+
+.contacts li {
+    padding: 10px;
+    cursor: pointer;
+    list-style-type: none;
+    display: flex;
+}
+
+.contacts li.active {
+    background-color: #f0f0f0;
+}
+
+.chat-messages {
+    padding: 20px;
+    flex: 1; /* 70% da largura total */
+    overflow-y: hidden; /* Adiciona barra de rolagem vertical */
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+}
+
+.chat-messages::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/08.jpg);
+    background-repeat: no-repeat;
+    background-size: 1050px;
+    opacity: 0.2; /* Ajuste a opacidade conforme necessário */
+    z-index: -1; /* Mantém o pseudo-elemento atrás do conteúdo */
+}
+
+.mensagem {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    position: relative;
+}
+
+.mensagem.enviada {
+    background-color: #DCF8C6;
+    align-self: flex-end;
+}
+
+.mensagem.recebida {
+    background-color: #E5E5EA;
+    align-self: flex-start;
+}
+
+.hora-msg {
+    position: absolute;
+    bottom: -15px;
+    right: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+.grupo-input{
+    margin-top: 20px;
+}
+
+.form-control {
+    width: 75%;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: #888 solid 1px;
+
+}
+
+
+.form-control:focus{
+    outline: none;
+}
+
+.enviar-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.enviar-btn:hover {
+    background-color: #0056b3;
+}
+.sms{
+    height: 68vh;
+    overflow-y: scroll;
+    
+}

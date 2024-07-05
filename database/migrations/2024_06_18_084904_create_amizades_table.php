@@ -14,9 +14,6 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         // Suas migrações aqui
-
-        Schema::enableForeignKeyConstraints();
-
         Schema::create('amizades', function (Blueprint $table) {
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
             $table->date('data_inicio'); // Coluna para armazenar a data de início da amizade
@@ -26,6 +23,10 @@ return new class extends Migration
             $table->unique(['usuario1_id', 'usuario2_id']); // Garante que a combinação de usuários seja única
             $table->timestamps(); // Colunas para created_at e updated_at
         });
+
+        Schema::enableForeignKeyConstraints();
+
+        
     }
 
     /**

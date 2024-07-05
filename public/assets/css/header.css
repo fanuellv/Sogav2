@@ -113,20 +113,7 @@ body, html {
     overflow: hidden;
     margin-top: 0px;
 }
-.left{
-    z-index: 0;
-    
-    top: 0px; /* Same as header height */
-    left: 0;
-    width: 30vw;
-    height: calc(100vh);
-    background-color: #eeee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-}
+
 .centerCenter{
     
     top: 0px; /* Same as header height */

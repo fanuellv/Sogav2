@@ -11,6 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('friend_requests', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('sender_id');
@@ -23,6 +25,8 @@ return new class extends Migration
         
             $table->unique(['sender_id', 'recipient_id']);
         });
+
+        Schema::enableForeignKeyConstraints();
         
     }
 

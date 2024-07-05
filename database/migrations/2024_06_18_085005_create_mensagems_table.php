@@ -14,15 +14,17 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         // Suas migrações aqui
-
-        Schema::enableForeignKeyConstraints();
-        
         Schema::create('mensagems', function (Blueprint $table) {
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
             $table->date('data');
             $table->string('texto');
-            $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('usuario_id1')->constrained('users')->onDelete('cascade');
+            $table->foreignId('usuario_id2')->constrained('users')->onDelete('cascade');
         });
+
+        Schema::enableForeignKeyConstraints();
+        
+        
     }
 
     /**

@@ -3,6 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+.left{
+    z-index: 0;
+    
+    top: 0px; /* Same as header height */
+    left: 0;
+    width: 30vw;
+    height: calc(100vh);
+    background-color: #eeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
 
 .publicacion {
   margin-top: 30px;
@@ -70,82 +84,79 @@
 }
 
 
-
-
-.modal-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* Fundo escuro */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  display: none;
-  /* Inicialmente oculto */
+  /* Estilo para o fundo escuro do modal */
+  .modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none; /* Inicialmente oculto */
 }
 
+/* Estilo para o conteúdo do modal */
 .publicacion-modal {
-  background: #fff;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff; /* Fundo branco */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
+/* Estilo para o formulário dentro do modal */
 .forma {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.forma h1 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
+.forma label {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
 }
 
-#texto {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+.forma input[type="text"],
+.forma input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 .inputs-modal {
-  margin-bottom: 20px;
-  display: flex;
-
-}
-
-.inputs-modal2 {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .inputs-modal label {
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
 }
 
-.inputs input[type="file"] {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
+.btnP {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.inputs input[type="button"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc
+.btnP:hover {
+    background-color: #0056b3;
 }
+
 
 .grupo {
   max-width: 350px;
@@ -197,7 +208,7 @@
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #316199;
   color: white;
 }
 

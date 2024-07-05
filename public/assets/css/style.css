@@ -1,0 +1,305 @@
+
+
+
+
+/* Início da Posição do Table Button No Header */
+
+.btn-h {
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: #3b82f6;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.btn-h:hover {
+    background-color: #1e3a8a;
+}
+
+.main-content {
+    
+    width: 60vw;
+    height: auto;
+    overflow-y: scroll;
+    display: flex;
+    flex: 1;
+    background-color: white;
+    margin-top: 30px;
+
+}
+.left{
+    z-index: 0;
+    
+    top: 0px; /* Same as header height */
+    left: 0;
+    width: 26vw;
+    height: calc(100vh);
+    background-color: #eeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.profile, .friends-list {
+    width: 20%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile {
+    position: relative;
+    right: 20px;
+    width: 80%;
+    height: 50%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.profile img{
+    width: 100px;
+    height: 100px;
+}
+.listaGrupos{
+    height: 50%;
+    width: 100%;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.profile h2 {
+    text-align: center;
+}
+
+.profile p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* Início da Posição do SideBar */
+
+.icon-education, .icon-work, .icon-location, .icon-friends {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.icon-education:hover {
+    background-color: rgb(181, 218, 218);
+}
+
+.icon-work {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.icon-work:hover {
+    background-color: rgb(181, 218, 218);
+}
+
+.icon-location {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.icon-location:hover {
+    background-color: rgb(181, 218, 218);
+}
+
+.icon-friends {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.icon-friends:hover {
+    background-color: rgb(181, 218, 218);
+}
+
+/* Fecho da Posição do SideBar */
+
+.profile-details button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-details .icon-education, .profile-details .icon-work, .profile-details .icon-location, .profile-details .icon-friends {
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    margin-right: 10px;
+}
+
+.upload-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.upload-button:hover {
+    background-color: #1e3a8a;
+}
+
+.post-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.post-btn:hover {
+    background-color: #1e3a8a;
+}
+
+.addM-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.addM-btn:hover {
+    background-color: #1e3a8a;
+}
+
+.posts {
+    flex: 1;
+    padding: 20px;
+}
+
+.post-creation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post-creation input {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.post-creation .post-options button {
+    padding: 10px;
+    margin-right: 5px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.post {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Botões da div post-actions */
+
+.post-actions button {
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #3b82f6;
+}
+
+.post-actions button:hover {
+    background-color: #3b5998;
+}
+
+/* Fecho botões da div post-actions */
+
+.friends-list h3 {
+    margin-top: 0;
+}
+
+.friends-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.friends-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.friends-list .friend-profile {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.friends-list .icon-chat {
+    width: 20px;
+    height: 20px;
+    background-color: #3b82f6;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+aside .profile  {
+    text-align: center;
+}

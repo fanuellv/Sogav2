@@ -16,4 +16,8 @@ class Amizade extends Model
     {
         return $this->belongsTo(User::class, 'usuario1_id');
     }
+    public function receiver()
+    {
+        return $this->belongsTo(User::class, 'usuario2_id');
+    }
 }

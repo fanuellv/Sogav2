@@ -56,4 +56,7 @@ Route::middleware('auth')->group(function () {
 });
 
 //routa chat
-Route::get('/chat',[chatController::class, 'index'])->name('chat');
+Route::middleware('auth')->group(function () {
+    Route::get('/chat', [ChatController::class, 'index'])->name('chat');
+    
+});

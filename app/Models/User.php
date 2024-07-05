@@ -53,4 +53,5 @@ class User extends Authenticatable
     {
         return $this->initiatedFriendships()->where('status', 'espera')->get();
     }
+    
 }

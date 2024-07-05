@@ -14,9 +14,6 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         // Suas migrações aqui
-
-        Schema::enableForeignKeyConstraints();
-
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id(); // Cria uma coluna 'id' do tipo bigint auto-incrementada
             $table->string('texto');
@@ -24,6 +21,10 @@ return new class extends Migration
             $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
             
         });
+
+        Schema::enableForeignKeyConstraints();
+
+        
     }
 
     /**

@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->foreignId('user_id')->nullable()->index();
@@ -19,6 +20,8 @@ return new class extends Migration
             $table->text('payload');
             $table->integer('last_activity')->index();
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

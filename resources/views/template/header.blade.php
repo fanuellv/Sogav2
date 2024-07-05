@@ -57,43 +57,8 @@
 
         </header>
         <div class="conteiner">
-            <div class="left">
-                <div class="person" style="background-image: url('{{ asset($user->fotoPerfil) }}');">
-
-                </div>
-                <h1 class="userName">{{ $user->name }}</h1>
-                <p class="bio">{{ $user->biografia }}</p>
-                <div class="iconsPerfil">
-                    <div class="iconP">
-                        <img src="./assets/img/icon/curso.svg" alt="">
-                        <p class="txtIcon">Curso: {{ $user->curso }}</p>
-                    </div>
-                    <div class="iconP">
-                        <img src="./assets/img/icon/ano.svg" alt="">
-                        <p class="txtIcon">Ano: {{ $user->ano }}</p>
-                    </div>
-                    <div class="iconP">
-                        <img src="./assets/img/icon/friendBlack.svg" alt="">
-                        <p class="txtIcon">Friend: </p>
-                    </div>
-                    <div class="iconP">
-                        <img src="./assets/img/icon/groupBlack.svg" alt="">
-                        <p class="txtIcon">Group: </p>
-                    </div>
-
-                </div>
-
-                <form action="{{route('login.destroy')}}" method="POST" >
-                    @csrf
-                    <button class="end" type="submit">Terminar sessão</button>
-                </form>
-                <br>
-                <form action="{{route('cadastrar.edit')}}" method="POST">
-                    @csrf
-                    <button class="editar" type="submit">Editar</button>
-                </form>
-
-            </div>
+            @yield('left')
+            
             @yield('content')
             
             @yield('rightContent')
