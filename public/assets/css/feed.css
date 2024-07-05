@@ -4,58 +4,61 @@
     box-sizing: border-box;
 }
 .publicacion{
-    margin-top: -60px;
-    width: calc(100vw-35px);
+    margin-top: 30px;
+    width: 45vw;
     background: #eeee;
     border-radius: 20px;
     display: flex;  
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 10px;
+    
 }
 
 .txtPublic{
-    width: calc(44vw);
+    width: 42vw;
     height: 40px;
     border-radius: 20px;
     border-style: none;
-    padding-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background: #ffff;
     cursor: pointer;
 
 }
 .container{
-    display: flex;
-    justify-content: space-between;
-    width: calc(100vw-35px);
+    position: relative;
+    right: 20px;
+    width: 40vw;
 }
 .inputsP{
-    width: 100%;
+    width: 40vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    
 
 }
 #image, #evento{
     width: 300px;
     height: 35px;
-    border-radius: 25px;
+    border-radius: 15px;
     border-style: none;
     color: #0000;
     background: #ffff;
     cursor: pointer;
+    margin: 2px;
 }
 .inputs{
     position: relative;
-    margin: 0px 0px;
+    
     
 }
 .inputs label{
     position: absolute;
     left: 125px;
     bottom: 12px;
-    color: #6d6d6dee;
+    color: #363636ee;
     
 }
 
@@ -134,7 +137,57 @@
     border: 1px solid #ccc
   }
   
-  #imagem-modal{
+  .grupo {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     
-  }
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo input[type="text"],
+.campo textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura do input */
+}
+
+.campo textarea {
+    resize: vertical; /* Permite o redimensionamento vertical do textarea */
+}
+
+.campo input[type="file"] {
+    margin-top: 5px;
+}
+
+.grupo button[type="submit"] {
+    background-color: #4484ce;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+
 

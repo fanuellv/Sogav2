@@ -86,6 +86,43 @@
 @endsection
 @section('rightContent')
     <div class="right">
+        <div class="grupo">
+            <form action="{{ route('grupo.store') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <h1>Criar Grupo</h1>
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <textarea name="descricao" id="descricao" rows="3" required></textarea>
+                </div>
+                <div class="campo">
+                    <label for="foto">Selecione uma foto</label>
+                    <input type="file" name="foto" id="foto" accept="image/*">
+                </div>
+
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+        <div class="amigos">
+            <hr id="linha">
+        <h1>Lista de amigos</h1>
+        @foreach ($user->friends() as $request)
+            <div class="containerUser">
+                @if ($request->initiator)
+                    <div class="userFoto" style="background-image: url('{{ asset($request->initiator->fotoPerfil) }}');">
+                    </div>
+                    <p>{{ $request->initiator->name }}</p>
+                    
+                @else
+                    <p>Iniciador não encontrado.</p>
+                @endif
+            </div>
+        @endforeach
+
+        </div>
 
     </div>
 @endsection

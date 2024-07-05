@@ -25,22 +25,30 @@
 .custom-file-upload {
     cursor: pointer;
 }
+.post{
+    width: auto;
+    height: auto;
+}
 
 .postContainer {
+
     max-height: 80vh; /* Adjust this value based on your layout */
-    overflow-y: auto;
+    overflow-y: hidden;
     padding: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     background-color: #f9f9f9;
+    
 }
 
 .postItem {
+    
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background-color: #fff;
+    
 }
 
 .topPost {
@@ -53,11 +61,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background-color: #ccc; /* Placeholder for profile photo */
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .userNamePost {

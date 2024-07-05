@@ -1,11 +1,13 @@
 .friendInterface {
     top: 13px;
     background: transparent;
-    width: 74vw;
-    left: 25vw;
+    width: 73vw;
     height: 87vh;
     position: relative;
     padding: 15px
+}
+.left{
+    width: 25vw;
 }
 
 #linha {

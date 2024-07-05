@@ -15,12 +15,15 @@ body, html {
 
 }
 .top{
+    position: relative;
+    z-index: 1;
     background: #4484ce;
     display: flex;
     width: 100vw;
     height: 65px;
     align-items: center;
     justify-content: center;
+    margin-bottom: none;
     
 }
 .logo{
@@ -34,7 +37,7 @@ body, html {
     width: 50%;
     align-items: center;
     justify-content: center;
-    position: relative;
+    z-index: 0;
     margin-top: 60px;
     
 }
@@ -108,17 +111,16 @@ body, html {
     display: flex;
     flex: 1;
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 .left{
-
-    position: fixed;
-    top: 65px; /* Same as header height */
+    z-index: 0;
+    
+    top: 0px; /* Same as header height */
     left: 0;
-    width: 25vw;
-    height: calc(100vh - 65px);
+    width: 30vw;
+    height: calc(100vh);
     background-color: #eeee;
-    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,32 +128,37 @@ body, html {
     
 }
 .centerCenter{
-    top: 65px; /* Same as header height */
+    
+    top: 0px; /* Same as header height */
     left: 0;
-    width: 75vw;
+    width: 60vw;
     overflow-y: hidden;
     height: calc(100vh - 65px);
-    padding: 15px;
+    padding: 0px;
     background: transparent;
 }
 .center{
-    position: relative;
+    z-index: -1;
+    
     top: 0px; /* Same as header height */
     left: 0;
-    width: 75vw;
+    width: 100%;
     overflow-y: auto;
+    
     background: #ffff;
-    height: auto;
+    height: calc(100vh - 55px);
     display: flex;
-    align-items: end;
-    justify-content: end;
+    align-items: center;
+    justify-content: center;
+    
 }
 .right{
-    position: relative;
+    z-index: 0;
+    
     top: 0px; /* Same as header height */
-    width: 25vw;
+    width: 30vw;
     height: calc(100vh);
-    background: #eeee;
+    background: transparent;
     overflow-y: auto;
     
 }
@@ -197,6 +204,7 @@ body, html {
 
 }
 .end{
+    z-index: 0;
     margin-top: 15px;
     width: 150px;
     height: 35px;
@@ -204,12 +212,11 @@ body, html {
     background: #ffff;
     border-radius: 30px;
     border: #bf2222 solid 2px;
+    cursor: pointer;
 }
 .content{
-    width: 60%;
-    position: relative;
-    top: 65px;
-    right: 45px;
-    height: calc(100vh - 100px);
+    padding: 30px;
+    margin-top: 25px;
+    height: calc(100vh);
     background: transparent;
 }

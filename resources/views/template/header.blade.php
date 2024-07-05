@@ -28,7 +28,7 @@
 
                     </div>
                 </a>
-                <a href="../feed" class="group">
+                <a href="{{route('grupo')}}" class="group">
                     <div class="igroup">
 
                     </div>

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\cadastrarController;
 use App\Http\Controllers\feedController;
+use App\Http\Controllers\grupoController;
 use App\Http\Controllers\postagemController;
 use App\Http\Controllers\PasswordEncryptionController;
 
@@ -45,4 +46,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/amigos/enviar/{id}', [AmigoController::class, 'enviarSolicitacao'])->name('amigos.enviar');
     Route::post('/amigos/aceitar/{id}', [AmigoController::class, 'aceitarSolicitacao'])->name('amigos.aceitar');
     Route::post('/amigos/recusar/{id}', [AmigoController::class, 'recusarSolicitacao'])->name('amigos.recusar');
+});
+
+//routa grupo
+Route::middleware('auth')->group(function () {
+    Route::get('/grupo', [grupoController::class,'index'])->name('grupo');
+    Route::post('/grupo', [grupoController::class,'store'])->name('grupo.store');
 });
