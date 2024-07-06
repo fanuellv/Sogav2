@@ -43,14 +43,20 @@ body, html {
 }
 
 .ifeed,.ifriend,.igroup,.ichat{
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background: #4484ce;
     border: #ffff solid 2px;
     border-radius: 100%;
     position: relative;
     margin-left: 20px;
     margin-right: 20px;
+
+}
+.ifeed:hover,.ifriend:hover,.igroup:hover,.ichat:hover{
+    background-color: #f19f4d;
+    transform: scale(1.2);
+    z-index: 2;
 
 }
 .ifeed{
@@ -88,6 +94,16 @@ body, html {
     justify-items: center;
     
 }
+input:focus,input:hover{
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+textarea:focus, textarea:focus{
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
 .lupa{
     width: 35px;
     height: 35px;
@@ -100,6 +116,9 @@ body, html {
     background-size: 15px;
     color: #ffff;
 }
+.lupa:hover{
+    transform: scale(1.3);
+}
 .txtSearch{
     width: 500px;
     border-radius: 50px;
@@ -107,6 +126,12 @@ body, html {
     padding-left: 15px;
     margin-right: 15px;
 }
+.txtSearch:focus, .txtSearch:hover{
+    border: #a7ccf4;
+    box-shadow: #aecbea;
+    outline: none;
+}
+
 .conteiner{
     display: flex;
     flex: 1;

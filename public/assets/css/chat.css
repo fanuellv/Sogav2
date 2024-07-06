@@ -2,9 +2,10 @@
     width: 26vw;
     height: 100vh; /* 100% da altura da viewport */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: top;
+    align-items: top;
     padding: 10px;
+    flex-direction: column;
 }
 .left{
     z-index: 0;
@@ -137,4 +138,20 @@ margin: 10px; /* margem à direita para separação do botão */
     height: 68vh;
     overflow-y: scroll;
     
+}
+
+
+.containerUser{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+.userFoto{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

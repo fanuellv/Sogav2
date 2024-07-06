@@ -231,3 +231,7 @@ button[type="submit"]:hover {
 .amigos{
   padding: 10px;
 }
+.downPost button:hover {
+  background-color: #4484ce; /* Cor de fundo quando hover */
+  color: white;
+}

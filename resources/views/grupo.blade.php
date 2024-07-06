@@ -7,7 +7,7 @@
 
     <div class="left">
         <div class="profile">
-            <img src="./img/friends1.jpg" alt="Imagem do Grupo" class="group-image">
+            <img src="{{asset('assets/img/friends1.jpg')}}" alt="Imagem do Grupo" class="group-image">
             <h1>Nome do Grupo</h1>
             <p>Descrição do Grupo</p>
             <p></p>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('numero')->unique();
             $table->string('password');
-            $table->date('dataNascimento')->nullable()->change();
+            $table->date('dataNascimento')->nullable();
             $table->string('biografia',255)->nullable();
             $table->string('fotoPerfil')->nullable(); // Campo para a foto de perfil
             $table->string('curso');

@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class comentario extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['texto', 'data', 'usuario_id'];
+
+    public function usuario()
+    {
+        return $this->belongsTo(User::class, 'usuario_id');
+    }
+    
 }

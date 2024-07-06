@@ -117,9 +117,10 @@
                             <hr>
                             <div class="downPost">
                                 <button onclick="">Gosto</button>
-                                <button onclick="">Comentar</button>
+                                <button onclick="mostrarComentario()">Comentar</button>
                                 <button onclick="">Partilhar</button>
                             </div>
+                            
 
                         </div>
                     @endforeach

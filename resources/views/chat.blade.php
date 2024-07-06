@@ -5,8 +5,17 @@
 @endsection
 @section('left')
     <div class="contact-list">
+        <h1>Chat - Soga</h1>
         <div class="contacts">
-            teste
+            @foreach ($user->friends() as $friend)
+                    <a href="">
+                        <div class="containerUser">
+                            <div class="userFoto" style="background-image: url('{{ asset($friend->fotoPerfil) }}');">
+                            </div>
+                            <p>{{ $friend->name }}</p>
+                        </div>
+                    </a>
+                @endforeach
         </div>
     </div>
 @endsection

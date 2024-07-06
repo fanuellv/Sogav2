@@ -24,5 +24,9 @@ class postagem extends Model
     {
         return $this->belongsTo(User::class, 'usuario_id');
     }
+    public function comentarios()
+{
+    return $this->hasMany(Comentario::class);
+}
 
 }
