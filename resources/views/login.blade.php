@@ -20,7 +20,7 @@
                 <div>
                     <img src="./assets/img/soga-blue.svg" alt="" class="logo">
                 </div>
-                <form method="post" action="{{route('login.store')}}"> <!-- Defina a ação para onde os dados devem ser enviados -->
+                <form method="post" action="{{route('login.store')}}"> 
                     @csrf
                     <div class="inputs">
                         <input type="text" name="numero" placeholder="Nº de estudante" required>

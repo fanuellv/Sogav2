@@ -28,22 +28,22 @@
             <div class="icon">
                 <a href="{{route('feed')}}" class="feed">
                     <div class="ifeed">
-
+                       <div class="texto">Feed</div>
                     </div>
                 </a>
                 <a href="{{route('amigo')}}" class="friend">
                     <div class="ifriend">
-
+                      <span class="texto">Amigos</span>
                     </div>
                 </a>
                 <a href="{{route('grupo')}}" class="group">
                     <div class="igroup">
-
+                      <span class="texto">Grupos</span>
                     </div>
                 </a>
                 <a href="{{route('chat')}}" class="chat">
                     <div class="ichat">
-
+                      <span class="texto">Chats</span>
                     </div>
                 </a>
 
